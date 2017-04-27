@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtExcelFile = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -43,7 +44,7 @@
             // 
             // txtExcelFile
             // 
-            this.txtExcelFile.Location = new System.Drawing.Point(79, 33);
+            this.txtExcelFile.Location = new System.Drawing.Point(79, 19);
             this.txtExcelFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExcelFile.Name = "txtExcelFile";
             this.txtExcelFile.Size = new System.Drawing.Size(450, 22);
@@ -52,7 +53,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(545, 27);
+            this.btnOK.Location = new System.Drawing.Point(545, 13);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(84, 32);
             this.btnOK.TabIndex = 6;
@@ -63,42 +64,44 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(800, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(1167, 239);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(627, 249);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.Visible = false;
             // 
             // lstItem
             // 
             this.lstItem.FormattingEnabled = true;
             this.lstItem.ItemHeight = 14;
-            this.lstItem.Location = new System.Drawing.Point(140, 288);
+            this.lstItem.Location = new System.Drawing.Point(183, 71);
             this.lstItem.Name = "lstItem";
-            this.lstItem.Size = new System.Drawing.Size(195, 200);
+            this.lstItem.Size = new System.Drawing.Size(559, 256);
             this.lstItem.TabIndex = 8;
             // 
             // lstItemDetail
             // 
             this.lstItemDetail.FormattingEnabled = true;
             this.lstItemDetail.ItemHeight = 14;
-            this.lstItemDetail.Location = new System.Drawing.Point(341, 288);
+            this.lstItemDetail.Location = new System.Drawing.Point(12, 333);
             this.lstItemDetail.Name = "lstItemDetail";
-            this.lstItemDetail.Size = new System.Drawing.Size(432, 200);
+            this.lstItemDetail.Size = new System.Drawing.Size(730, 256);
             this.lstItemDetail.TabIndex = 9;
             // 
             // lstDepItem
             // 
             this.lstDepItem.FormattingEnabled = true;
             this.lstDepItem.ItemHeight = 14;
-            this.lstDepItem.Location = new System.Drawing.Point(36, 288);
+            this.lstDepItem.Location = new System.Drawing.Point(12, 71);
             this.lstDepItem.Name = "lstDepItem";
-            this.lstDepItem.Size = new System.Drawing.Size(98, 200);
+            this.lstDepItem.Size = new System.Drawing.Size(165, 256);
             this.lstDepItem.TabIndex = 10;
+            this.lstDepItem.SelectedIndexChanged += new System.EventHandler(this.lstDepItem_SelectedIndexChanged);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(635, 27);
+            this.btnSave.Location = new System.Drawing.Point(635, 13);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 32);
             this.btnSave.TabIndex = 11;
@@ -112,16 +115,16 @@
             this.groupBox1.Controls.Add(this.txtExcelFile);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.btnOK);
-            this.groupBox1.Location = new System.Drawing.Point(12, 23);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(730, 149);
+            this.groupBox1.Size = new System.Drawing.Size(730, 52);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 36);
+            this.label1.Location = new System.Drawing.Point(18, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 14);
             this.label1.TabIndex = 12;
@@ -131,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1419, 543);
+            this.ClientSize = new System.Drawing.Size(765, 603);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstDepItem);
             this.Controls.Add(this.lstItemDetail);
@@ -139,6 +142,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Calc Items";
             this.Load += new System.EventHandler(this.Form1_Load);

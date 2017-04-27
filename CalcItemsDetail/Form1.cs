@@ -18,6 +18,10 @@ namespace CalcItemsDetail
             InitializeComponent();
         }
 
+
+        public static string appFolder = Application.StartupPath + @"\CalcTemp";
+
+
         private void txtExcelFile_DoubleClick(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -25,18 +29,16 @@ namespace CalcItemsDetail
             {
 
                 FileInfo fi = new FileInfo(open.FileName);
-                if ((fi.Extension == ".xls") | (fi.Extension == ".xlsx"))
+                if ((fi.Extension == ".xls") || (fi.Extension == ".xlsx"))
                 {
                     txtExcelFile.Text = open.FileName;
                 }
                 else
                 {
-                   
                     MessageBox.Show("you select file is not excel file...", "File Not Excel", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
 
-                
             }
         }
 
@@ -45,7 +47,7 @@ namespace CalcItemsDetail
         #region DataSet
 
 
-        static DataSet DataSetParse(string fileName)
+        static bool  DataSetParse(string fileName , out DataSet ds)
         {
             // string connectionString = string.Format("provider=Microsoft.Jet.OLEDB.4.0; data source={0};Extended Properties=Excel 8.0;", fileName);
 
@@ -58,14 +60,26 @@ namespace CalcItemsDetail
             string connectionString = string.Empty;
             System.IO.FileInfo fi = new System.IO.FileInfo(fileName);
             //MessageBox.Show(fi.Extension);
-
-            if (fi.Extension == ".xls")
-                connectionString = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1;'", fileName);
-            if (fi.Extension == ".xlsx")
-                connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1;'", fileName);
-
-
             DataSet data = new DataSet();
+            try
+            {
+                if (fi.Extension == ".xls")
+                    connectionString = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1;'", fileName);
+                if (fi.Extension == ".xlsx")
+                    connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1;'", fileName);
+            }
+            catch (Exception  ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                ds = data;
+                return false;
+            }
+
+            
+
+
+          
 
             foreach (var sheetName in GetExcelSheetNames(connectionString))
             {
@@ -82,8 +96,13 @@ namespace CalcItemsDetail
                 }
             }
 
-            return data;
+            ds = data;
+
+            return true;
+            
         }
+
+
 
         static string[] GetExcelSheetNames(string connectionString)
         {
@@ -112,14 +131,65 @@ namespace CalcItemsDetail
 
         #endregion
 
+
+
+
+        #region checkFolder
+
+
+        private void createTemp()
+        {
+
+            
+
+            if (Directory.Exists(appFolder ))
+                Directory.Delete(appFolder , true);
+            Directory.CreateDirectory(appFolder);
+
+        }
+
+        #endregion
+
+
+
         private void btnOK_Click(object sender, EventArgs e)
         {
+
+
+            //string s = @"DECN/BCN會議";
+
+            //if (s.Contains(@"/"))
+            //{
+            //    MessageBox.Show(s.Replace(@"/", "_"));
+            //}
+
+
+            //return;
+            if (string.IsNullOrEmpty (txtExcelFile.Text .Trim ()))
+                return ;
+
+
+            createTemp();
             this.Enabled = false;
             lstItem.Items.Clear();
             lstItemDetail.Items.Clear();
             lstDepItem.Items.Clear();
-            DataSet ds = DataSetParse(txtExcelFile.Text.Trim ());
+            DataSet ds = new DataSet();
+            if (!DataSetParse(txtExcelFile.Text.Trim(), out ds))
+            {
+                this.Enabled = true;
+                return;
+            }
+            
+            loadItemSubitem(ds);
             dataGridView1.DataSource = ds.Tables[3];
+            loadSubitemDetail(ds);
+
+
+            MessageBox.Show("Calc all item is OK");
+            this.Enabled = true;
+
+            return;
             loadDepItem(ds);
             loadItem(ds);
 
@@ -197,6 +267,90 @@ namespace CalcItemsDetail
 
 
 
+        #region new method
+
+
+        private void loadItemSubitem(DataSet ds)
+        {
+            for (int i = 0; i < ds.Tables[3].Rows.Count; i++)
+            {
+                string Item = string.Empty;//DepItem
+                Item = ds.Tables[3].Rows[i]["DepItem"].ToString().Trim();
+                string Subitem = string.Empty;//工作細目
+                Subitem = ds.Tables[3].Rows[i]["工作細目"].ToString().Trim();
+
+                if (!string.IsNullOrEmpty(Item))
+                {
+                    string itemFile = string.Empty;
+                    itemFile = Item;
+
+                    if (itemFile.Contains(@"/"))
+                        itemFile = itemFile.Replace(@"/", "_");
+                    if (lstDepItem.Items.IndexOf(itemFile) >= 0)
+                    {
+                        //exits
+                    }
+                    else
+                        lstDepItem.Items.Add(itemFile);
+                        
+                    itemFile = appFolder + @"\" + @itemFile;
+                    StreamWriter sw = new StreamWriter(itemFile, true);
+                    if (!string.IsNullOrEmpty(Subitem))
+                        sw.WriteLine(Subitem);
+                    sw.Close();
+                }
+
+            }
+        }
+
+
+
+        private void loadSubitemDetail(DataSet ds)
+        {
+         
+            DirectoryInfo di = new DirectoryInfo(appFolder);
+            foreach (FileInfo  fi in di.GetFiles())
+            {
+                lstItemDetail.Items.Add("----------");
+                lstItemDetail.Items.Add(fi.Name);
+                lstItemDetail.Items.Add("----------");
+                StreamReader sr = new StreamReader(fi.FullName);
+
+                string sLine = string.Empty;
+                while (!sr.EndOfStream )
+                {
+                    sLine = sr.ReadLine().Trim();
+                    int i_itemcount = 0;
+                    decimal v_time = 0;
+                    for (int i = 0; i < ds.Tables[3].Rows.Count; i++)
+                    {
+                        string itemdetail = string.Empty;//工作細目
+                        itemdetail = ds.Tables[3].Rows[i]["工作細目"].ToString().Trim ();
+
+                        if (itemdetail == sLine)
+                        {
+                            i_itemcount++;
+                            v_time = v_time + Convert.ToDecimal(ds.Tables[3].Rows[i]["周工時(分)"].ToString());
+                        }
+                    }
+                    lstItemDetail.Items.Add(sLine  + ",項目個數:" + i_itemcount + ",周工時:" + v_time);
+                }
+
+                sr.Close();
+
+            }
+        }
+
+
+
+        #endregion
+
+
+
+
+
+
+
 
         private void loadDepItem(DataSet ds)
         {
@@ -217,7 +371,6 @@ namespace CalcItemsDetail
 
             }
         }
-
 
         private void loadItem(DataSet ds)
         {
@@ -270,11 +423,23 @@ namespace CalcItemsDetail
             if (lstItemDetail.Items.Count >= 0)
             {
 
+                this.Enabled = false;
+                string logpath = Application.StartupPath + @"\Save360Item" + DateTime.Now.ToString("yyyyMMdd") + ".txt";
+
+                if (File.Exists(@logpath))
+                {
+                    File.Delete(@logpath);
+                }
+
+                StreamWriter sw = new StreamWriter(logpath, true);
                 for (int i = 0; i < lstItemDetail.Items.Count; i++)
                 {
-                    saveLog(lstItemDetail.Items[i].ToString());
+                    sw.WriteLine(lstItemDetail.Items[i]);
                 }
-                MessageBox.Show("Save OK...");
+
+                sw.Close();
+                MessageBox.Show("Save ok.file path is :" + logpath);
+                this.Enabled = true;
             }
             else
                 return;
@@ -319,37 +484,69 @@ namespace CalcItemsDetail
         /// </summary>
         /// <param name="logtype">log類型</param>
         /// <param name="logcontents">log內容</param>
-        public static void saveLog( string logcontents)
+        public static void saveLog( string logcontents,string logpath)
         {
             //根据logtype获取对应的文件路徑以及文件名
-            string logpath = Application.StartupPath +@"\Save360Item" + DateTime.Now.ToString ("yyyyMMddhhmmss") +".txt";
+            
                        
 
             //判斷文件是否存在，不存在就创建文件，存在就写入文件
-            if (!File.Exists(@logpath))
+            if (File.Exists(@logpath))
             {
-                FileStream fs = File.Create(@logpath);
-                fs.Close();
+                File.Delete(@logpath);
             }
-            try
-            {
 
-             File.AppendAllText(@logpath, @logcontents + "\r\n");
-                    
-            
-                   
-            }
-            catch (Exception)
-            {
-                //wait
+            StreamWriter sw = new StreamWriter(logpath, true);
+            sw.WriteLine(logcontents);
+            sw.Close();
 
-            }
+           
+     
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             txtExcelFile.SetWatermark("DbClick here to select the excel file...");
+        }
+
+        private void lstDepItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstItem.Items.Clear();
+
+            string item = lstDepItem.SelectedItem.ToString();
+            string fileItem = appFolder + @"\" + item;
+
+            StreamReader sr = new StreamReader(fileItem);
+
+            string sline = string.Empty;
+            while (!sr.EndOfStream)
+            {
+                sline = sr.ReadLine().Trim();
+
+                for (int i = 0; i < lstItemDetail.Items.Count; i++)
+                {
+                    if (lstItemDetail.Items[i].ToString().Trim().StartsWith(sline))
+                    {
+                        if (lstItem.Items.IndexOf(lstItemDetail.Items[i]) >= 0)
+                        {
+                        }
+                        else
+                        {
+
+                            lstItem.Items.Add(lstItemDetail.Items[i]);
+                        }
+                    }
+                }
+
+                
+
+
+            }
+
+
+            sr.Close ();
+
         }
 
     }
