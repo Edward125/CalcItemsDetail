@@ -156,15 +156,7 @@ namespace CalcItemsDetail
         {
 
    
-            //string s = @"DECN/BCN會議";
-
-            //if (s.Contains(@"/"))
-            //{
-            //    MessageBox.Show(s.Replace(@"/", "_"));
-            //}
-
-
-            //return;
+     
             if (string.IsNullOrEmpty (txtExcelFile.Text .Trim ()))
                 return ;
 
@@ -191,83 +183,6 @@ namespace CalcItemsDetail
             MessageBox.Show("Calc all item is OK");
             this.Enabled = true;
 
-
-
-
-
-            return;
-            loadDepItem(ds);
-            loadItem(ds);
-
-            for (int k = 0; k < lstDepItem.Items.Count; k++)
-            {
-                
-
-                string depitem = lstDepItem.Items[k].ToString();
-                lstItemDetail.Items.Add(depitem);
-
-                int i_space = 0;
-                for (int i = 0; i < lstItem.Items.Count; i++)
-                {
-                    
-                    decimal v_time = 0;
-                    int i_itemcount = 0;
-                    string itemname = lstItem.Items[i].ToString();
-                    if (itemname == " ")
-                        i_space++;
-
-                    
-
-                       for (int j = 0; j < ds.Tables[3].Rows.Count; j++)
-                        {
-                            string itemdetail = string.Empty;//工作細目
-                            string depitemdetail = string.Empty;
-
-                            depitemdetail = ds.Tables[3].Rows[j]["DepItem"].ToString();
-                            itemdetail = ds.Tables[3].Rows[j]["工作細目"].ToString();
-
-                            if (depitemdetail == depitem)
-                            {
-
-                                if (!string.IsNullOrEmpty(itemname))
-                                {
-                                    if (itemdetail == itemname)
-                                    {
-                                        i_itemcount++;
-
-                                        //MessageBox.Show((ds.Tables[3].Rows[j]["周工時(分)"].ToString()));
-
-                                        v_time = v_time + Convert.ToDecimal(ds.Tables[3].Rows[j]["周工時(分)"].ToString());
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
-
-                       //if (k != i_space)
-                       //    break;
-                      
-
-                   // MessageBox.Show(  "k:" + k +",i:" +i_space.ToString());
-                       if (k == i_space  && !string.IsNullOrEmpty (itemname.Trim ()))
-                       {
-                           lstItemDetail.Items.Add(itemname + ",項目個數:" + i_itemcount + ",周工時:" + v_time);
-                     }
-                   
-                    //MessageBox.Show("k:" + k + ",i:" + i_space.ToString());
-                   // MessageBox.Show(i_space.ToString());
-
-                }
-            }
-
-
-
-
-
-            this.Enabled = true;
         }
 
 
