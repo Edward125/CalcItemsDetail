@@ -5,3 +5,11 @@ D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.Properties.R
 D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.csproj.GenerateResource.Cache
 D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.exe
 D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.pdb
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.exe
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.pdb
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\bin\Debug\CalcItemsDetail.exe
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\bin\Debug\CalcItemsDetail.pdb
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.csprojResolveAssemblyReference.cache
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.Form1.resources
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.Properties.Resources.resources
+Z:\Users\Edward\EdwardCode\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.csproj.GenerateResource.Cache

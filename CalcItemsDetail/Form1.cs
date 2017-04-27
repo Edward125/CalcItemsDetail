@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using Edward;
 
 namespace CalcItemsDetail
 {
@@ -22,7 +23,20 @@ namespace CalcItemsDetail
             OpenFileDialog open = new OpenFileDialog();
             if (open.ShowDialog() == DialogResult.OK)
             {
-                txtExcelFile.Text = open.FileName;
+
+                FileInfo fi = new FileInfo(open.FileName);
+                if ((fi.Extension == ".xls") | (fi.Extension == ".xlsx"))
+                {
+                    txtExcelFile.Text = open.FileName;
+                }
+                else
+                {
+                   
+                    MessageBox.Show("you select file is not excel file...", "File Not Excel", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+
+                
             }
         }
 
@@ -335,7 +349,7 @@ namespace CalcItemsDetail
 
         private void Form1_Load(object sender, EventArgs e)
         {
-             
+            txtExcelFile.SetWatermark("DbClick here to select the excel file...");
         }
 
     }

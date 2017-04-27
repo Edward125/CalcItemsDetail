@@ -35,21 +35,24 @@
             this.lstItemDetail = new System.Windows.Forms.ListBox();
             this.lstDepItem = new System.Windows.Forms.ListBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtExcelFile
             // 
-            this.txtExcelFile.Location = new System.Drawing.Point(39, 26);
+            this.txtExcelFile.Location = new System.Drawing.Point(79, 33);
             this.txtExcelFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExcelFile.Name = "txtExcelFile";
-            this.txtExcelFile.Size = new System.Drawing.Size(494, 22);
+            this.txtExcelFile.Size = new System.Drawing.Size(450, 22);
             this.txtExcelFile.TabIndex = 5;
             this.txtExcelFile.DoubleClick += new System.EventHandler(this.txtExcelFile_DoubleClick);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(539, 20);
+            this.btnOK.Location = new System.Drawing.Point(545, 27);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(84, 32);
             this.btnOK.TabIndex = 6;
@@ -60,7 +63,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(916, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(800, 250);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(627, 249);
@@ -70,7 +73,7 @@
             // 
             this.lstItem.FormattingEnabled = true;
             this.lstItem.ItemHeight = 14;
-            this.lstItem.Location = new System.Drawing.Point(116, 75);
+            this.lstItem.Location = new System.Drawing.Point(140, 288);
             this.lstItem.Name = "lstItem";
             this.lstItem.Size = new System.Drawing.Size(195, 200);
             this.lstItem.TabIndex = 8;
@@ -79,7 +82,7 @@
             // 
             this.lstItemDetail.FormattingEnabled = true;
             this.lstItemDetail.ItemHeight = 14;
-            this.lstItemDetail.Location = new System.Drawing.Point(317, 75);
+            this.lstItemDetail.Location = new System.Drawing.Point(341, 288);
             this.lstItemDetail.Name = "lstItemDetail";
             this.lstItemDetail.Size = new System.Drawing.Size(432, 200);
             this.lstItemDetail.TabIndex = 9;
@@ -88,14 +91,14 @@
             // 
             this.lstDepItem.FormattingEnabled = true;
             this.lstDepItem.ItemHeight = 14;
-            this.lstDepItem.Location = new System.Drawing.Point(12, 75);
+            this.lstDepItem.Location = new System.Drawing.Point(36, 288);
             this.lstDepItem.Name = "lstDepItem";
             this.lstDepItem.Size = new System.Drawing.Size(98, 200);
             this.lstDepItem.TabIndex = 10;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(629, 20);
+            this.btnSave.Location = new System.Drawing.Point(635, 27);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 32);
             this.btnSave.TabIndex = 11;
@@ -103,26 +106,46 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtExcelFile);
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.btnOK);
+            this.groupBox1.Location = new System.Drawing.Point(12, 23);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(730, 149);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 14);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "ExcelFile";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 284);
-            this.Controls.Add(this.btnSave);
+            this.ClientSize = new System.Drawing.Size(1419, 543);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstDepItem);
             this.Controls.Add(this.lstItemDetail);
             this.Controls.Add(this.lstItem);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.txtExcelFile);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Calc Items";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -135,6 +158,8 @@
         private System.Windows.Forms.ListBox lstItemDetail;
         private System.Windows.Forms.ListBox lstDepItem;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
