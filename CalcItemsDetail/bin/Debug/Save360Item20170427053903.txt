@@ -1,0 +1,214 @@
+A機種試產review會議
+Buglist Review,項目個數:20,周工時:644.0
+new model Bug review,項目個數:1,周工時:60
+New model C4,C5 meeting,項目個數:10,周工時:117.875
+new model  Bug review,項目個數:9,周工時:184.75
+New Model EVT/DVT1/DVT2/Xbulid Readiess Meeting,項目個數:9,周工時:42.625
+New model kick off meeting,項目個數:6,周工時:25.605
+New model test plan alignment meeting,項目個數:4,周工時:24.375
+New model pilot run readiness meeting,項目個數:7,周工時:55.375
+New model pilot run buglist review meeting,項目個數:7,周工時:92.875
+New model pilot run DFx review meeting,項目個數:4,周工時:31.875
+New model pilot run PFMEA review meeting,項目個數:4,周工時:31.875
+New model pilot run NUDD review meeting,項目個數:4,周工時:31.875
+New model pilot run close meeting,項目個數:7,周工時:92.875
+Kick Off meeting,項目個數:3,周工時:15
+重组issue CTF 参数review,項目個數:1,周工時:5
+support NPI完成P/R 风险评估,項目個數:1,周工時:15
+new model PR 业绩对话会议,項目個數:2,周工時:7.50
+BCN确认及切入,項目個數:1,周工時:0.75
+C4 files maintain,項目個數:2,周工時:1.50
+C5 files maintain,項目個數:2,周工時:2
+debug ng MB,項目個數:1,周工時:45
+FA G/S test Report,項目個數:1,周工時:60
+New model P/R  EVT/DVT1/DVT2/X-Build readiness meeting,項目個數:2,周工時:37.5
+New model P/R EVT/DVT1/DVT2/X-Build Bug review meeting,項目個數:2,周工時:37.5
+参加new model kick off meeting,項目個數:1,周工時:4.98
+参加readiness meeting，确认PR status,項目個數:2,周工時:9.96
+参加review meeting,項目個數:2,周工時:6.64
+参加readiness meeting，确认 status,項目個數:1,周工時:4.98
+B品質會議
+Weekly Quality Meeting,項目個數:4,周工時:63.75
+BI Report Review,項目個數:1,周工時:50
+BI review meeting,項目個數:3,周工時:825
+QPA kick off metting,項目個數:1,周工時:2.52
+QPA Close meeting,項目個數:1,周工時:2.52
+C客訴review
+Weekly RMA/DOA review meeting,項目個數:1,周工時:15
+CSD 客诉issue review,項目個數:5,周工時:230
+客诉issue call-log meeting,項目個數:10,周工時:346.0
+Venice weekly RMA/DOA review meeting,項目個數:4,周工時:31.0
+CSD测试不良MB分析和改善对策及追踪,項目個數:1,周工時:10
+support AQM客诉issue厂内对应solution导入,項目個數:1,周工時:15
+DECN/BCN會議
+ECN/BCN phase in meeting,項目個數:1,周工時:15
+ECN/BCN/DDD phase in meeting,項目個數:11,周工時:82.875
+ECR Control/Batch run meeting,項目個數:9,周工時:54.75
+BCN切入会议,項目個數:8,周工時:26.00
+ECN切入会议,項目個數:8,周工時:43.5
+参加BCN，ECN切入会议,項目個數:1,周工時:15
+参加主导者召开会议,項目個數:1,周工時:15
+K良率改善會議
+自动化项目review meeting,項目個數:3,周工時:9
+PR机种良率改善会议,項目個數:6,周工時:82.50
+MP机种良率改善会议,項目個數:8,周工時:120.00
+Broad return meeting,項目個數:4,周工時:26.25
+RE回流MB测试items评估,項目個數:2,周工時:10
+RE回流MB测试集中性（>=3pcs）不良分析和改善对策及追踪,項目個數:1,周工時:5
+RE回流MB bios copy rom档确认,項目個數:1,周工時:5
+RE回流MB测试coverage优化方案评估,項目個數:1,周工時:5
+QIT改善,項目個數:1,周工時:7.5
+KS13 WIN/CHR良率改善,項目個數:1,周工時:180
+Taos良率改善,項目個數:1,周工時:180
+EKD1200內部會議
+Review各课异常以及工作安排等,項目個數:7,周工時:1080
+开会了解生产异常,对异常处理给出建议方向以及当日工作安排等,項目個數:38,周工時:6335
+PE部会,項目個數:10,周工時:90.06
+PE/ATE daily  Leader早会,項目個數:9,周工時:1740
+PE课会,項目個數:8,周工時:262.50
+产品工程部课级内部早会,項目個數:1,周工時:3.75
+开会汇报对应班别生产异常以及处理方法，提出疑难问题商讨解决方案等,項目個數:8,周工時:1000
+宣導公司方向，激勵員工士氣,項目個數:12,周工時:60.78
+FA业绩对话,項目個數:0,周工時:0
+M360 外部check out meeting,項目個數:0,周工時:0
+PCBA业绩对话,項目個數:0,周工時:0
+360内部 check in Meeting,項目個數:0,周工時:0
+360内部 check out  Meeting,項目個數:0,周工時:0
+360 外部check out  Meeting,項目個數:0,周工時:0
+PR业绩对话,項目個數:0,周工時:0
+360 check out  Meeting,項目個數:0,周工時:0
+各机种PR 异常以及解决方案，生产计划等review,項目個數:0,周工時:0
+提前填写异常RC,ST,LT，为业绩对话做好准备,項目個數:0,周工時:0
+review上一工作日生产/品质异常/解决方案，以及当日生产状况，各追踪项目,項目個數:0,周工時:0
+汇报当日工作状况，追踪后续工作进展,項目個數:0,周工時:0
+提前填写异常RC,ST,LT，为360 check out做好准备,項目個數:0,周工時:0
+review下一个工作日需做事项和各追踪项目,項目個數:0,周工時:0
+与厂级主管review当天需做事项,項目個數:0,周工時:0
+与厂级主管review汇报当日工作状况，追踪后续工作进展,項目個數:0,周工時:0
+与副厂报告360工作事项,項目個數:0,周工時:0
+V360 业绩对话,項目個數:0,周工時:0
+daily V2A M360 checkout meeting,項目個數:0,周工時:0
+M360 team4 daily check in meeting,項目個數:0,周工時:0
+M360 team4 daily check out meeting,項目個數:0,周工時:0
+M360
+生产会议,項目個數:0,周工時:0
+工程部门跨site meeting,項目個數:0,周工時:0
+monthly KPI meeting,項目個數:0,周工時:0
+weekly site meeting,項目個數:0,周工時:0
+weekly 跨厂工程会议,項目個數:0,周工時:0
+daily 生产会议,項目個數:0,周工時:0
+O廠處會議
+PE/EE key issue weekly meeting,項目個數:0,周工時:0
+EE Top issue tracking report,項目個數:0,周工時:0
+F台北RD會議
+各体系认真meeting(ISO14001,18000,EICC&SA8000 ）,項目個數:0,周工時:0
+F認證體系會議
+功能性相关半成品/成品sorting/rework会议,項目個數:0,周工時:0
+功能性验证半成品/成品control run/batch run会议,項目個數:0,周工時:0
+功能性issue sorting/rework流程/方式定义,項目個數:0,周工時:0
+功能性issue sorting/rework方法提供及教线,項目個數:0,周工時:0
+功能性issue sorting/rework G.S样本制作,項目個數:0,周工時:0
+功能性issue sorting/rework相关不良确认及分析,項目個數:0,周工時:0
+Rework/sorting meeting,項目個數:0,周工時:0
+制程相关半成品sorting/rework会议,項目個數:0,周工時:0
+New bios batch run会议,項目個數:0,周工時:0
+New bios phase in会议,項目個數:0,周工時:0
+support SQM 厂商FA Report review,項目個數:0,周工時:0
+support PSE 制程不良分析，对策制定，风险评估,項目個數:0,周工時:0
+Grework/sorting/batch/control run會議
+PCBA&FA测试程序精简及抽测会议,項目個數:0,周工時:0
+FA RUN IN时间精简会议,項目個數:0,周工時:0
+工程测试流程相关优化及改善会议,項目個數:0,周工時:0
+H機種精簡會議
+出BCC/CSD生产准备会议,項目個數:0,周工時:0
+量产准备会议,項目個數:0,周工時:0
+PCBA转线准备会议,項目個數:0,周工時:0
+Rosa Model 量产准备会议,項目個數:0,周工時:0
+CSD出货BIOS&工程版本确认,項目個數:0,周工時:0
+新几种量产会议,項目個數:0,周工時:0
+几种转线生产会议,項目個數:0,周工時:0
+架线/改线会议,項目個數:0,周工時:0
+产能提升会议,項目個數:0,周工時:0
+参加MP量产准备会议,項目個數:0,周工時:0
+参加机种转线会议,項目個數:0,周工時:0
+CSD MB机种online debug,項目個數:0,周工時:0
+I生產準備會議
+禁用物料管控meeting,項目個數:0,周工時:0
+purge meeting,項目個數:0,周工時:0
+拆解物料管控会议,項目個數:0,周工時:0
+Forbid材料会议,項目個數:0,周工時:0
+J物料管控會議
+CSD测试items评估,項目個數:0,周工時:0
+support PME机电搭配issue分析,項目個數:0,周工時:0
+QIT/QCC发表会,項目個數:0,周工時:0
+参加跨site QIT/QCC发表会,項目個數:0,周工時:0
+各类需部门负责人&助理参加会议,項目個數:0,周工時:0
+参加每月员工代表大会,項目個數:0,周工時:0
+Pother
+网络分析仪介绍,項目個數:0,周工時:0
+3D camera测试灯箱原理介绍,項目個數:0,周工時:0
+3G/4G/GPS测试原理介绍,項目個數:0,周工時:0
+DOA实验分析,項目個數:0,周工時:0
+Key issue分析逻辑和report撰写,項目個數:0,周工時:0
+时间管理及培训,項目個數:0,周工時:0
+资材管理,項目個數:0,周工時:0
+Issue debug&report 撰写,項目個數:0,周工時:0
+现场分析,項目個數:0,周工時:0
+issue tree,項目個數:0,周工時:0
+Tips,項目個數:0,周工時:0
+工程分析技巧,項目個數:0,周工時:0
+高效沟通,項目個數:0,周工時:0
+6 sigma,項目個數:0,周工時:0
+项目管理技巧,項目個數:0,周工時:0
+示波器学习,項目個數:0,周工時:0
+电路图/点图使用,項目個數:0,周工時:0
+电路原理及debug方法,項目個數:0,周工時:0
+5W1H\PDCA等方法应用用,項目個數:0,周工時:0
+lesson learn课程学习,項目個數:0,周工時:0
+内部改善提升方案,項目個數:0,周工時:0
+各部门职责介绍,項目個數:0,周工時:0
+PCBA&FA生产流程熟悉及掌握,項目個數:0,周工時:0
+工厂专有名词熟悉及掌握,項目個數:0,周工時:0
+HAKKO&电烙铁学习&使用,項目個數:0,周工時:0
+55料号编码规则,項目個數:0,周工時:0
+SFCS数据查询,項目個數:0,周工時:0
+EC切入流程&工程版本变更作业流程,項目個數:0,周工時:0
+BIOS&EC FW刻录母片制作,項目個數:0,周工時:0
+PCBA&FA维修不良及原因代码,項目個數:0,周工時:0
+C流程介绍,項目個數:0,周工時:0
+电容/电阻/电感/PWM/LDO/Power sequence介绍,項目個數:0,周工時:0
+电路基础,項目個數:0,周工時:0
+不良MB&机台快速分析及维修,項目個數:0,周工時:0
+A3 report撰写,項目個數:0,周工時:0
+ATS DL专业训,項目個數:0,周工時:0
+ATS日常DL加班安排,項目個數:0,周工時:0
+ATS日常考勤提报加班和请假,項目個數:0,周工時:0
+ATS DL技能,高手考试申请以及试题准备,項目個數:0,周工時:0
+ATS DL每月2次相关技能tracking,項目個數:0,周工時:0
+引导新人成长，人力分配,項目個數:0,周工時:0
+L教育訓練
+开会导入ATS后将载板对应线别ATS标号进行编号交付FA使用,項目個數:0,周工時:0
+开会导入ATS 开线时online确认导入状况,項目個數:0,周工時:0
+ATS导入会议,項目個數:0,周工時:0
+WCD/WCQ/WKS ATS交流会议,項目個數:0,周工時:0
+自动化优化会议,項目個數:0,周工時:0
+参与PMO or IE主导的自动化专案改善会议,項目個數:0,周工時:0
+自动化专案改善review会议,項目個數:0,周工時:0
+导入FICT手动测试meeting,項目個數:0,周工時:0
+导入FICT自动化测试meeting,項目個數:0,周工時:0
+导入FICT手动双连板测试meeting,項目個數:0,周工時:0
+导入FICT自动化双连板测试meeting,項目個數:0,周工時:0
+chrome系统导入FICT测试 meeting,項目個數:0,周工時:0
+治具报废处理流程meeting,項目個數:0,周工時:0
+治具入EMS帐操作流程meeting,項目個數:0,周工時:0
+治具导入19码编码规则meeting,項目個數:0,周工時:0
+PCB板流板方向确认meeting,項目個數:0,周工時:0
+控制程序刻录并调试,項目個數:0,周工時:0
+成品功能调试,項目個數:0,周工時:0
+成品维护,項目個數:0,周工時:0
+自动化项目改善review会议,項目個數:0,周工時:0
+FA 导入ATS自动测试meeting,項目個數:0,周工時:0
+DT导入自动化测试方案讨论meeting,項目個數:0,周工時:0
+厂内治具制作流程讨论meeting,項目個數:0,周工時:0
+weekly DT测试自动化review 会议,項目個數:0,周工時:0
+N設備相關會議
