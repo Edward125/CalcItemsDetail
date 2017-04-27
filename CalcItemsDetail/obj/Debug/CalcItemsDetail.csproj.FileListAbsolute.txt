@@ -1,0 +1,7 @@
+D:\Edward\CalcItemsDetail\CalcItemsDetail\bin\Debug\CalcItemsDetail.exe
+D:\Edward\CalcItemsDetail\CalcItemsDetail\bin\Debug\CalcItemsDetail.pdb
+D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.Form1.resources
+D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.Properties.Resources.resources
+D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.csproj.GenerateResource.Cache
+D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.exe
+D:\Edward\CalcItemsDetail\CalcItemsDetail\obj\Debug\CalcItemsDetail.pdb
