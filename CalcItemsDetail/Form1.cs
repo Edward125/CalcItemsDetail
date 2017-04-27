@@ -155,7 +155,7 @@ namespace CalcItemsDetail
         private void btnOK_Click(object sender, EventArgs e)
         {
 
-
+   
             //string s = @"DECN/BCN會議";
 
             //if (s.Contains(@"/"))
@@ -174,6 +174,8 @@ namespace CalcItemsDetail
             lstItem.Items.Clear();
             lstItemDetail.Items.Clear();
             lstDepItem.Items.Clear();
+            grbSubItem.Text = "";
+            grbDepItem.Text = "";
             DataSet ds = new DataSet();
             if (!DataSetParse(txtExcelFile.Text.Trim(), out ds))
             {
@@ -188,6 +190,10 @@ namespace CalcItemsDetail
 
             MessageBox.Show("Calc all item is OK");
             this.Enabled = true;
+
+
+
+
 
             return;
             loadDepItem(ds);
@@ -294,14 +300,43 @@ namespace CalcItemsDetail
                         lstDepItem.Items.Add(itemFile);
                         
                     itemFile = appFolder + @"\" + @itemFile;
-                    StreamWriter sw = new StreamWriter(itemFile, true);
-                    if (!string.IsNullOrEmpty(Subitem))
-                        sw.WriteLine(Subitem);
-                    sw.Close();
+
+                    if (!checkContentsExits(Subitem, itemFile))
+                    {
+                        StreamWriter sw = new StreamWriter(itemFile, true);
+                        if (!string.IsNullOrEmpty(Subitem))
+                            sw.WriteLine(Subitem);
+                        sw.Close();
+                    }
                 }
 
             }
+
+            grbDepItem.Text = "Total Items:" + lstDepItem.Items.Count;
+
+
         }
+
+
+
+        private bool checkContentsExits(string scontent, string file)
+        {
+
+            if (!File.Exists(file))
+                return false;
+            else
+            {
+                StreamReader sr = new StreamReader(file);
+                string sl = sr.ReadToEnd();
+                sr.Close();
+                if (sl.Contains(scontent))
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+
 
 
 
@@ -507,6 +542,7 @@ namespace CalcItemsDetail
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             txtExcelFile.SetWatermark("DbClick here to select the excel file...");
         }
 
@@ -514,11 +550,11 @@ namespace CalcItemsDetail
         {
             lstItem.Items.Clear();
 
+            decimal i_time = 0;
+
             string item = lstDepItem.SelectedItem.ToString();
             string fileItem = appFolder + @"\" + item;
-
             StreamReader sr = new StreamReader(fileItem);
-
             string sline = string.Empty;
             while (!sr.EndOfStream)
             {
@@ -533,19 +569,22 @@ namespace CalcItemsDetail
                         }
                         else
                         {
-
                             lstItem.Items.Add(lstItemDetail.Items[i]);
+
+                            string it = lstItemDetail.Items[i].ToString();
+
+                            i_time = i_time + Convert.ToDecimal(it.Substring(it.LastIndexOf(':') + 1, it.Length - it.LastIndexOf(':') - 1));
+
                         }
                     }
                 }
 
-                
-
-
             }
 
-
             sr.Close ();
+
+
+            grbSubItem.Text = lstDepItem.SelectedItem.ToString() + ",Subitem:" + lstItem.Items.Count + ",Time:" + i_time;
 
         }
 

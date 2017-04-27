@@ -38,8 +38,14 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.grbDepItem = new System.Windows.Forms.GroupBox();
+            this.grbSubItem = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.grbDepItem.SuspendLayout();
+            this.grbSubItem.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtExcelFile
@@ -47,13 +53,13 @@
             this.txtExcelFile.Location = new System.Drawing.Point(79, 19);
             this.txtExcelFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExcelFile.Name = "txtExcelFile";
-            this.txtExcelFile.Size = new System.Drawing.Size(450, 22);
+            this.txtExcelFile.Size = new System.Drawing.Size(491, 22);
             this.txtExcelFile.TabIndex = 5;
             this.txtExcelFile.DoubleClick += new System.EventHandler(this.txtExcelFile_DoubleClick);
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(545, 13);
+            this.btnOK.Location = new System.Drawing.Point(576, 13);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(84, 32);
             this.btnOK.TabIndex = 6;
@@ -75,7 +81,7 @@
             // 
             this.lstItem.FormattingEnabled = true;
             this.lstItem.ItemHeight = 14;
-            this.lstItem.Location = new System.Drawing.Point(183, 71);
+            this.lstItem.Location = new System.Drawing.Point(6, 25);
             this.lstItem.Name = "lstItem";
             this.lstItem.Size = new System.Drawing.Size(559, 256);
             this.lstItem.TabIndex = 8;
@@ -84,16 +90,16 @@
             // 
             this.lstItemDetail.FormattingEnabled = true;
             this.lstItemDetail.ItemHeight = 14;
-            this.lstItemDetail.Location = new System.Drawing.Point(12, 333);
+            this.lstItemDetail.Location = new System.Drawing.Point(6, 21);
             this.lstItemDetail.Name = "lstItemDetail";
-            this.lstItemDetail.Size = new System.Drawing.Size(730, 256);
+            this.lstItemDetail.Size = new System.Drawing.Size(744, 298);
             this.lstItemDetail.TabIndex = 9;
             // 
             // lstDepItem
             // 
             this.lstDepItem.FormattingEnabled = true;
             this.lstDepItem.ItemHeight = 14;
-            this.lstDepItem.Location = new System.Drawing.Point(12, 71);
+            this.lstDepItem.Location = new System.Drawing.Point(6, 21);
             this.lstDepItem.Name = "lstDepItem";
             this.lstDepItem.Size = new System.Drawing.Size(165, 256);
             this.lstDepItem.TabIndex = 10;
@@ -101,7 +107,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(635, 13);
+            this.btnSave.Location = new System.Drawing.Point(666, 14);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 32);
             this.btnSave.TabIndex = 11;
@@ -117,7 +123,7 @@
             this.groupBox1.Controls.Add(this.btnOK);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(730, 52);
+            this.groupBox1.Size = new System.Drawing.Size(761, 52);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
@@ -130,15 +136,43 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "ExcelFile";
             // 
+            // grbDepItem
+            // 
+            this.grbDepItem.Controls.Add(this.lstDepItem);
+            this.grbDepItem.Location = new System.Drawing.Point(12, 70);
+            this.grbDepItem.Name = "grbDepItem";
+            this.grbDepItem.Size = new System.Drawing.Size(179, 287);
+            this.grbDepItem.TabIndex = 13;
+            this.grbDepItem.TabStop = false;
+            // 
+            // grbSubItem
+            // 
+            this.grbSubItem.Controls.Add(this.lstItem);
+            this.grbSubItem.Location = new System.Drawing.Point(197, 70);
+            this.grbSubItem.Name = "grbSubItem";
+            this.grbSubItem.Size = new System.Drawing.Size(576, 287);
+            this.grbSubItem.TabIndex = 14;
+            this.grbSubItem.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lstItemDetail);
+            this.groupBox4.Location = new System.Drawing.Point(12, 363);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(761, 330);
+            this.groupBox4.TabIndex = 15;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "All Details";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 603);
+            this.ClientSize = new System.Drawing.Size(796, 699);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.grbSubItem);
+            this.Controls.Add(this.grbDepItem);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lstDepItem);
-            this.Controls.Add(this.lstItemDetail);
-            this.Controls.Add(this.lstItem);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -149,6 +183,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.grbDepItem.ResumeLayout(false);
+            this.grbSubItem.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -164,6 +201,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox grbDepItem;
+        private System.Windows.Forms.GroupBox grbSubItem;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 
