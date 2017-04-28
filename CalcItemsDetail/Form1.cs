@@ -155,8 +155,7 @@ namespace CalcItemsDetail
         private void btnOK_Click(object sender, EventArgs e)
         {
 
-   
-     
+
             if (string.IsNullOrEmpty (txtExcelFile.Text .Trim ()))
                 return ;
 
@@ -205,8 +204,7 @@ namespace CalcItemsDetail
                     string itemFile = string.Empty;
                     itemFile = Item;
 
-                    if (itemFile.Contains(@"/"))
-                        itemFile = itemFile.Replace(@"/", "_");
+                    itemFile = replaceString(itemFile);
                     if (lstDepItem.Items.IndexOf(itemFile) >= 0)
                     {
                         //exits
@@ -215,6 +213,8 @@ namespace CalcItemsDetail
                         lstDepItem.Items.Add(itemFile);
                         
                     itemFile = appFolder + @"\" + @itemFile;
+
+                    Subitem = replaceString(Subitem);
 
                     if (!checkContentsExits(Subitem, itemFile))
                     {
@@ -232,6 +232,19 @@ namespace CalcItemsDetail
 
         }
 
+
+        private string replaceString(string str)
+        {
+            if (str.Contains(@"/"))
+                str = str.Replace(@"/", "_");
+            if (str.Contains("\r\n"))
+                str = str.Replace("\r\n", " ");
+            if (str.Contains("\r"))
+                str = str.Replace("\r", " ");
+            if (str.Contains("\n"))
+                str = str.Replace("\n", " ");
+            return str;
+        }
 
 
         private bool checkContentsExits(string scontent, string file)
@@ -276,6 +289,8 @@ namespace CalcItemsDetail
                     {
                         string itemdetail = string.Empty;//工作細目
                         itemdetail = ds.Tables[3].Rows[i]["工作細目"].ToString().Trim ();
+
+                        itemdetail = replaceString(itemdetail);
 
                         if (itemdetail == sLine)
                         {
