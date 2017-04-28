@@ -457,7 +457,7 @@ namespace CalcItemsDetail
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            this.Text = "Calculate Items Details info...,Ver:" + Application.ProductVersion;
             txtExcelFile.SetWatermark("DbClick here to select the excel file...");
         }
 
@@ -501,6 +501,19 @@ namespace CalcItemsDetail
 
             grbSubItem.Text = lstDepItem.SelectedItem.ToString() + ",Subitem:" + lstItem.Items.Count + ",Time:" + i_time;
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                Directory.Delete(appFolder, true);
+            }
+            catch (Exception)
+            {
+                
+                //throw;
+            }
         }
 
     }

@@ -81,9 +81,9 @@
             // 
             this.lstItem.FormattingEnabled = true;
             this.lstItem.ItemHeight = 14;
-            this.lstItem.Location = new System.Drawing.Point(6, 25);
+            this.lstItem.Location = new System.Drawing.Point(6, 21);
             this.lstItem.Name = "lstItem";
-            this.lstItem.Size = new System.Drawing.Size(559, 256);
+            this.lstItem.Size = new System.Drawing.Size(559, 200);
             this.lstItem.TabIndex = 8;
             // 
             // lstItemDetail
@@ -101,7 +101,7 @@
             this.lstDepItem.ItemHeight = 14;
             this.lstDepItem.Location = new System.Drawing.Point(6, 21);
             this.lstDepItem.Name = "lstDepItem";
-            this.lstDepItem.Size = new System.Drawing.Size(165, 256);
+            this.lstDepItem.Size = new System.Drawing.Size(165, 200);
             this.lstDepItem.TabIndex = 10;
             this.lstDepItem.SelectedIndexChanged += new System.EventHandler(this.lstDepItem_SelectedIndexChanged);
             // 
@@ -141,7 +141,7 @@
             this.grbDepItem.Controls.Add(this.lstDepItem);
             this.grbDepItem.Location = new System.Drawing.Point(12, 70);
             this.grbDepItem.Name = "grbDepItem";
-            this.grbDepItem.Size = new System.Drawing.Size(179, 287);
+            this.grbDepItem.Size = new System.Drawing.Size(179, 227);
             this.grbDepItem.TabIndex = 13;
             this.grbDepItem.TabStop = false;
             // 
@@ -150,14 +150,14 @@
             this.grbSubItem.Controls.Add(this.lstItem);
             this.grbSubItem.Location = new System.Drawing.Point(197, 70);
             this.grbSubItem.Name = "grbSubItem";
-            this.grbSubItem.Size = new System.Drawing.Size(576, 287);
+            this.grbSubItem.Size = new System.Drawing.Size(576, 227);
             this.grbSubItem.TabIndex = 14;
             this.grbSubItem.TabStop = false;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lstItemDetail);
-            this.groupBox4.Location = new System.Drawing.Point(12, 363);
+            this.groupBox4.Location = new System.Drawing.Point(12, 303);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(761, 330);
             this.groupBox4.TabIndex = 15;
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 699);
+            this.ClientSize = new System.Drawing.Size(789, 647);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.grbSubItem);
             this.Controls.Add(this.grbDepItem);
@@ -179,6 +179,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Calc Items";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
